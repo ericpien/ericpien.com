@@ -1,0 +1,115 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eric Pien, CFA</title>
+    <link rel = "icon" href = "ep.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+  </head>
+    
+  <body>
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="http://www.ericpien.com/">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-link" href="/visitors">Visitors</a>
+            <a class="nav-link active" aria-current="page" href="/projects">Projects</a>
+            <a class="nav-link" href="/resume">Resume</a>
+            <a class="nav-link" href="/contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="row">
+      
+      <div class="col-3">
+          
+          <div id="simple-list-example" class="d-flex flex-column gap-2 simple-list-example-scrollspy text-center">
+            <a class="p-1 rounded" href="#simple-list-item-1" style="text-decoration:none">Youtube Video Summarizer</a>
+            <a class="p-1 rounded" href="#simple-list-item-2" style="text-decoration:none">Tab Split Extension</a>
+            <a class="p-1 rounded" href="#simple-list-item-3" style="text-decoration:none">Parking Airbnb</a>
+            <a class="p-1 rounded" href="#simple-list-item-4" style="text-decoration:none">BattleSnake</a>
+          </div>
+        </div>
+        <div class="col-8">
+          <div data-bs-spy="scroll" data-bs-target="#simple-list-example" data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+            <h4 id="simple-list-item-1">Youtube Video Summarizer - Project Recapt</h4>
+            <hr>
+            <p>Experience an interactive and efficient way to digest long YouTube videos with Project Recapt. Through the ingenious processing of closed captions using ChatGPT, we enable insightful conversations about the content.</p>
+            <p>In recent years, long-form videos have gained immense popularity for their ability to delve deeper into topics and reach a global audience. These videos hold a wealth of collective knowledge, but verbal communication's limited information rate can't compete with written forms. Our solution, developed during the 2023 BCS Hackathon, addresses this challenge by facilitating faster information sharing and offering an immersive experience for content creators and their audience.</p>
+            <p>To accomplish this, we harnessed the power of the YouTube Transcript API (<a style="text-decoration:none" href="https://pypi.org/project/youtube-transcript-api/">PyPI</a>, <a style="text-decoration:none" href="https://github.com/jdepoix/youtube-transcript-api">GitHub</a>) to extract information in text form. Leveraging OpenAI's API (<a style="text-decoration:none" href="https://platform.openai.com/docs/api-reference?lang=python">OpenAI Documentation</a>, <a style="text-decoration:none" href="https://github.com/openai/openai-python">GitHub</a>), we fed this text as an initial prompt to ChatGPT. The backend, powered by Flask and Python, offers a seamless RESTful API experience for user interactions.</p>
+            <p>The frontend is integrated as a Chrome Extension, harmonizing with the YouTube layout. Upon clicking the extension button, an interactive window appears, allowing users to engage with the video's summarized content. I spearheaded the frontend implementation and API integration, contributing to our second-place victory at the hackathon.</p>
+            <p>Take a look at a demo of the project featuring a popular Lex Fridman podcast with Sam Altman. We first request the extension to summarize the video and then follow up with a more specific question about the safety features in GPT-4.</p>
+            <iframe width="500" height="650" src="https://www.youtube.com/embed/y35AX94yKc8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <p><br/><br/></p>
+        
+            <h4 id="simple-list-item-2">Tab Split Extension</h4>
+            <hr>
+            <p>Introducing Tab Split, a game-changing Chrome extension that empowers users to split their current tab into two halves for independent scrolling.</p>
+            <p>This ingenious project originated during a Software Construction course at UBC when a teammate faced a frustrating challenge. The course used PrairieLearn for assessments, and one particular assessment required students to analyze a long Java program and locate specific bugs. However, the constant back-and-forth scrolling between the prompt and the code caused unnecessary frustration and hindered the core purpose of the assessments.</p>
+            <p>To address this pain point, I developed the Tab Split Chrome extension, offering vertical or horizontal splits for the current tab. Inspired by popular IDEs, where such features are expected, Tab Split aims to enhance user productivity and readability.</p>
+            <p>Additionally, the extension brings the added advantage of enabling users to read long texts on websites that support iframe windows, such as Wikipedia and Wall Street Journal. This feature proves invaluable when processing large volumes of dense information without juggling multiple windows.</p>
+            <p>Tab Split is now available on the Chrome Store (<a style="text-decoration:none" href="https://chrome.google.com/webstore/detail/tabsplit/khcnjlofjhioabfnnckgdhahahpiodol">Tab Split</a>), and I plan to introduce automatic resizing of the secondary screen to fill the entire screen in the next update.</p>
+            <p>Experience the power of Tab Split in action with the demo below:</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0HgRyQqfuMI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <p><br/><br/></p>
+        
+            <h4 id="simple-list-item-3">Parking Airbnb - Project Beeno</h4>
+            <hr>
+            <p>Introducing Beeno, the innovative Parking Airbnb web app that revolutionizes how users can post and book available parking spots for vanlifers, travelers, or local commuters.</p>
+            <p>Our inspiration for this project came from a teammate's challenging experience while traveling in a van during the summer of 2022. Faced with a lack of suitable parking infrastructure, we developed Beeno as part of the nwHacks 2023 Hackathon project.</p>
+            <p>I collaborated with a partner to create the backend using Flask and Python, establishing a robust RESTful API and an SQL database.</p>
+            <p>Beeno boasts an array of impressive features:<br>
+              • Create a personal account to manage your bookings and parking spot offerings<br>
+              • Streamlined user authentication for secure login<br>
+              • Conveniently search for available bookings based on your selected location and date<br>
+              • Book a parking stall with a single click for seamless planning<br>
+              • Easily view all your booked parking spots and offered parking stalls, along with booking details<br>
+              • Effortlessly add new parking stall offerings with images, descriptions, and locations<br>
+            </p>
+            <p>Witness the magic of Beeno in action with the following demo. See how a user registers an account, books an available parking spot, and receives a concise summary of all their information in a separate tab:</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JKggHhhjm4M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <p><br/><br/></p>
+
+            <h4 id="simple-list-item-4">BattleSnake</h4>
+            <hr>
+            <p>Battlesnake is a multiplayer programming game where each player utilizes snake AI to compete against others. 
+              This project uses Python 3 and leverages Flask to receive board state and return game input via REST API. 
+              I utilized n-step ahead forecasting to enable the snakes to look ahead several permutations ahead and make the best decision.
+              As part of the project, I wrote 2 variants of the snake apt for its environment: 1) multiplayer battle snake and 2) solo survival snake.</p>
+
+              <p><b>Multiplayer Battle Snake</b></p>
+              <p>Battle snake is optimized to most efficiently operate while accounting for other snakes' possible moves. It prefers staying lean and avoiding unnecessary risks. Due to additional snakes and forecast time constraint, it is limited to only 2 moves of forecasts. </p>
+
+              <p>The following are the observations from the video:<br>
+                • Turn 75 shows the snake turning away as getting within the 1 block radius of the snake's next head position carries certain risk.<br>
+                • This is different from turn 99 when it takes the food with confidence knowing it is an advantageous position before the enemy snake can make the turn.<br>
+                • On turn 100, it pivots up to avoid further exploring too close to the enemy snake.<br>
+              </p>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/WAP-yWF8-fs?si=nm4KS91c2mV7ac5Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <p><br/><br/></p>
+              <p><b>Solo Survival Snake</b></p>
+              <p>Solo survival snake is optimized to increase the depth considered and add more incentive to consume food. Added depth consideration is unlocked by the absence of other snakes to permute into the future. The snake is also given leniency to consume food as there are less uncertainty in the next turns.</p>
+
+              <p>The following are the observations from the video:<br>
+                • The food seeking behavior is more obvious than the battle optimized snake from the start.<br>
+                • Turn 156 is exemplifies awareness of further steps ahead and preference for empty space by turning away from the tail.<br>
+                • After the short detour before chasing the tail again in seeking the next food.<br>
+                • Similar observation is made at turn 178.<br>
+                • Starting Turn 220, it gets stuck as any additional food consumption would lead to its own demise.<br>
+              </p>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/cdetPrKb_zA?si=hidJV6eBD441Z2xW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>
+

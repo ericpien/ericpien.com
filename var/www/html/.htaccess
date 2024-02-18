@@ -1,0 +1,9 @@
+RewriteEngine On
+
+RewriteRule ^about$ about.html [NC]
+RewriteRule ^visitors$ visitors.php [NC]
+RewriteRule ^resume$ resume.html [NC]
+RewriteRule ^projects$ projects.html [NC]
+RewriteRule ^contact$ contact.html [NC]
+
+# reference: https://www.digitalocean.com/community/tutorials/how-to-set-up-mod_rewrite-for-apache-on-centos-7
